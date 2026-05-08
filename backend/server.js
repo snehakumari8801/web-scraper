@@ -1,0 +1,21 @@
+
+const app = require("./app");
+const scrapeHackerNews = require("./services/scraperService");
+const Story = require("./models/Story");
+const { default: connectDB } = require("./config/db");
+require("dotenv").config()
+
+async function startServer() {
+  await connectDB();
+
+  // Auto scrape
+  const stories = await scrapeHackerNews();
+  await Story.deleteMany();
+  await Story.insertMany(stories);
+
+  const port = process.env.PORT;
+
+  app.listen(port, () => console.log(`Server running ${port}`));
+}
+
+startServer();
