@@ -1,5 +1,5 @@
 const Story = require("../models/Story");
-const User = require("../models/User");
+const User = require("../models/user");
 
 exports.getStories = async (req, res) => {
   try {
