@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API = axios.create({
   // baseURL: "http://localhost:3000/api",
-  baseURL: "https://web-scraper-backend3.onrender.com/api"
+  baseURL: "https://web-scraper-bc.onrender.com/api"
 });
 
 export const register = (data) => API.post("/auth/register", data);
