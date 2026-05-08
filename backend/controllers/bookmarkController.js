@@ -1,6 +1,5 @@
 const User = require("../models/User");
 
-// TOGGLE BOOKMARK
 exports.toggleBookmark = async (req, res) => {
   try {
     const userId = req.user.id;
@@ -25,7 +24,6 @@ exports.toggleBookmark = async (req, res) => {
 };
 
 
-// GET USER BOOKMARKS
 exports.getBookmarks = async (req, res) => {
   try {
     const user = await User.findById(req.user.id).populate("bookmarks");

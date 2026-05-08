@@ -1,11 +1,9 @@
 const Story = require("../models/Story");
 const User = require("../models/User");
 
-// GET ALL STORIES
 exports.getStories = async (req, res) => {
   try {
     const stories = await Story.find().sort({ points: -1 });
-        // console.log(stories)
 
     res.status(200).json({
         message:"Fetch successfully",
