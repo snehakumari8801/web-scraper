@@ -13,7 +13,7 @@ async function startServer() {
   await Story.deleteMany();
   await Story.insertMany(stories);
 
-  const port = process.env.PORT;
+  const port = process.env.PORT || 5000;
 
   app.listen(port, () => console.log(`Server running ${port}`));
 }
