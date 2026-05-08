@@ -1,6 +1,6 @@
 // controllers/scraperController.js
 const scrapeHackerNews = require("../services/scraperService");
-const Story = require("../models/Story");
+const Story = require("../models/story");
 
 exports.runScraper = async (req, res) => {
   try {
