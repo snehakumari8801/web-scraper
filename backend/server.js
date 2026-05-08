@@ -1,7 +1,7 @@
 
 const app = require("./app");
 const scrapeHackerNews = require("./services/scraperService");
-const Story = require("./models/Story");
+const Story = require("./models/story");
 const { default: connectDB } = require("./config/db");
 require("dotenv").config()
 
