@@ -10,14 +10,12 @@ export default function StoryCard({ story, onBookmark, onView }) {
         {story.title}
       </h2>
 
-      {/* Meta */}
       <div className="text-xs sm:text-sm text-gray-400 space-y-1 mb-4">
         <p>⭐ {story.points} points</p>
         <p>👤 {story.author}</p>
         <p>⏱ {story.postedAt}</p>
       </div>
 
-      {/* Buttons */}
       <div className="flex gap-2 sm:gap-3">
         <button
           onClick={(e) => {

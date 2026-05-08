@@ -18,7 +18,6 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           
-          {/* Logo */}
           <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[rgba(212,163,61,0.08)] border border-[rgba(212,163,61,0.25)] flex items-center justify-center">
               <span className="text-[#d4a33d] text-base sm:text-lg">📚</span>
@@ -28,7 +27,6 @@ export default function Navbar() {
             </h2>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             {token && (
               <div className="flex items-center gap-4">
@@ -97,7 +95,6 @@ export default function Navbar() {
             </button>
           )}
 
-          {/* Mobile Auth for non-logged in users */}
           {!token && (
             <div className="flex md:hidden items-center gap-2">
               <Link to="/login" className="px-3 py-1.5 rounded-lg bg-[rgba(212,163,61,0.08)] border border-[rgba(212,163,61,0.25)] text-[#d4a33d] text-xs font-medium">
